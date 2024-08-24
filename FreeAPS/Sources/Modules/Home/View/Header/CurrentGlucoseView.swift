@@ -70,7 +70,7 @@ struct CurrentGlucoseView: View {
                                 NSLocalizedString("min", comment: "Short form for minutes") + " "
                         )
                     )
-                    ..font(.body).fontWeight(.bold)
+                    .font(.body).fontWeight(.bold)
 
                     Text(
                         delta
