@@ -123,7 +123,7 @@ struct CurrentGlucoseView: View {
             return Image(systemName: "arrow.left.and.right")
         }
     }
-var image: Image {
+var image2: Image {
         guard let direction = recentGlucose?.direction else {
             return Image(systemName: "arrow.left.and.right")
         }
