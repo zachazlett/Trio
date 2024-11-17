@@ -141,7 +141,7 @@ struct CurrentGlucoseView: View {
              .rateOutOfRange:
             return Image(systemName: "arrow.left.and.right")
         default:
-            break
+            return Image
         }
     }
 
