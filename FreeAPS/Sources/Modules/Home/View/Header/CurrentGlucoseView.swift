@@ -124,14 +124,14 @@ struct CurrentGlucoseView: View {
         }
     }
  var image2: Image {
-        guard let direction = recentGlucose?.direction else {
+        guard let direction2 = recentGlucose?.direction2 else {
             return Image(systemName: "arrow.left.and.right")
         }
 
-        switch direction {
+        switch direction2 {
         case .doubleUp,
              .tripleUp:
-            return Image(systemName: "arrow.up")
+            return Image(systemName: "arrow.up") 
         case .doubleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
@@ -140,11 +140,8 @@ struct CurrentGlucoseView: View {
              .notComputable,
              .rateOutOfRange:
             return Image(systemName: "arrow.left.and.right")
-        default:
-            return Image
         }
     }
-
     var colorOfGlucose: Color {
         let whichGlucose = recentGlucose?.glucose ?? 0
 
