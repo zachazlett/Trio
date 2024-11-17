@@ -17,7 +17,15 @@ struct BloodGlucose: JSON, Identifiable, Hashable {
         case notComputable = "NOT COMPUTABLE"
         case rateOutOfRange = "RATE OUT OF RANGE"
     }
-
+enum Direction2: String, JSON {
+        case tripleUp = "TripleUp"
+        case doubleUp = "DoubleUp"
+        case doubleDown = "DoubleDown"
+        case tripleDown = "TripleDown"
+        case none = "NONE"
+        case notComputable = "NOT COMPUTABLE"
+        case rateOutOfRange = "RATE OUT OF RANGE"
+    }
     var _id = UUID().uuidString
     var id: String {
         _id
@@ -25,6 +33,7 @@ struct BloodGlucose: JSON, Identifiable, Hashable {
 
     var sgv: Int?
     var direction: Direction?
+    var direction2: Direction2?
     let date: Decimal
     let dateString: Date
     let unfiltered: Decimal?
