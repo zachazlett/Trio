@@ -132,20 +132,10 @@ var image: Image {
         case .doubleUp,
              .tripleUp:
             return Image(systemName: "arrow.up") 
-        case .singleUp,
-             .flat,
-             .singleDown,
-             .fortyFiveDown,
-             .fortyFiveUp:
-            return Image(systemName: "nul")
         case .doubleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
-
-        case .none,
-             .notComputable,
-             .rateOutOfRange:
-            return Image(systemName: "arrow.left.and.right")
+        default: break
         }
 
     var colorOfGlucose: Color {
