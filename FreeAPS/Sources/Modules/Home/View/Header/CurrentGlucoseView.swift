@@ -60,6 +60,7 @@ struct CurrentGlucoseView: View {
                     .foregroundColor(alarm == nil ? colorOfGlucose : .loopRed)
 
                     image
+                    image2
                 }
                 HStack {
                     let minutesAgo = -1 * (recentGlucose?.dateString.timeIntervalSinceNow ?? 0) / 60
@@ -103,7 +104,33 @@ struct CurrentGlucoseView: View {
         switch direction {
         case .doubleUp,
              .singleUp,
-             .flat,
+             .tripleUp:
+            return Image(systemName: "arrow.up") 
+        case .fortyFiveUp:
+            return Image(systemName: "arrow.up.right")
+        case .flat:
+            return Image(systemName: "arrow.forward")
+        case .fortyFiveDown:
+            return Image(systemName: "arrow.down.forward") 
+        case .doubleDown,
+             .singleDown,
+             .tripleDown:
+            return Image(systemName: "arrow.down")
+
+        case .none,
+             .notComputable,
+             .rateOutOfRange:
+            return Image(systemName: "arrow.left.and.right")
+        }
+    }
+var image2: Image {
+        guard let direction = recentGlucose?.direction else {
+            return Image(systemName: "arrow.left.and.right")
+        }
+
+        switch direction {
+        case .doubleUp,
+             .singleUp,
              .tripleUp:
             return Image(systemName: "arrow.up") 
         case .fortyFiveUp:
