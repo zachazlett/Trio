@@ -137,7 +137,7 @@ var image2: Image {
             return Image(systemName: "arrow.down")
         default: break
         }
-
+    }
     var colorOfGlucose: Color {
         let whichGlucose = recentGlucose?.glucose ?? 0
 
