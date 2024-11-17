@@ -108,7 +108,7 @@ struct CurrentGlucoseView: View {
         case .fortyFiveUp:
             return Image(systemName: "arrow.up.right")
         case .flat:
-            return Image(systemName: "arrow.forward" and "arrow.up")
+            return Image(systemName: "arrow.forward";"arrow.up")
         case .fortyFiveDown:
             return Image(systemName: "arrow.down.forward") 
         case .doubleDown,
