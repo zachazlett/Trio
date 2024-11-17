@@ -130,24 +130,11 @@ var image2: Image {
 
         switch direction {
         case .doubleUp,
-             .singleUp,
              .tripleUp:
-            return Image(systemName: "arrow.up") 
-        case .fortyFiveUp:
-            return Image(systemName: "arrow.up.right")
-        case .flat:
-            return Image(systemName: "arrow.forward")
-        case .fortyFiveDown:
-            return Image(systemName: "arrow.down.forward") 
+            return Image(systemName: "arrow.up")
         case .doubleDown,
-             .singleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
-
-        case .none,
-             .notComputable,
-             .rateOutOfRange:
-            return Image(systemName: "arrow.left.and.right")
         }
     }
 
