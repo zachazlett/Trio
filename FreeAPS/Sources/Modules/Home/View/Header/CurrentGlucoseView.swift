@@ -135,11 +135,6 @@ struct CurrentGlucoseView: View {
         case .doubleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
-
-        case .none,
-             .notComputable,
-             .rateOutOfRange:
-            return Image(systemName: "arrow.left.and.right")
         }
     }
     var colorOfGlucose: Color {
