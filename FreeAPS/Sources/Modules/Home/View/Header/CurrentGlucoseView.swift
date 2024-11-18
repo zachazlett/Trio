@@ -124,7 +124,7 @@ struct CurrentGlucoseView: View {
         }
     }
  var image2: Image {
-        guard let direction2 = recentGlucose?.direction2 else {
+        guard let direction2 = recentGlucose?.direction else {
             return Image(systemName: "")
         }
 
