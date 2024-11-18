@@ -22,9 +22,6 @@ enum Direction2: String, JSON {
         case doubleUp = "DoubleUp"
         case doubleDown = "DoubleDown"
         case tripleDown = "TripleDown"
-        case none = "NONE"
-        case notComputable = "NOT COMPUTABLE"
-        case rateOutOfRange = "RATE OUT OF RANGE"
     }
     var _id = UUID().uuidString
     var id: String {
