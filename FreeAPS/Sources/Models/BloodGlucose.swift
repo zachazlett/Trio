@@ -20,6 +20,7 @@ struct BloodGlucose: JSON, Identifiable, Hashable {
 enum Direction2: String, JSON {
         case tripleUp = "TripleUp"
         case doubleUp = "DoubleUp"
+        case flat = "Flat"
         case doubleDown = "DoubleDown"
         case tripleDown = "TripleDown"
     }
