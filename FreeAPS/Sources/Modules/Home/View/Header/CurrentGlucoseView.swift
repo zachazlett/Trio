@@ -141,6 +141,7 @@ struct CurrentGlucoseView: View {
         case .doubleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
+      
         case .none,
              .notComputable,
              .rateOutOfRange:
