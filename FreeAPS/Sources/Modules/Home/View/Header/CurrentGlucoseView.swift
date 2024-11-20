@@ -139,6 +139,7 @@ struct CurrentGlucoseView: View {
              .singleDown,
             return Image(systemName: "none") 
         case .doubleDown,
+             .singleDown,
              .tripleDown:
             return Image(systemName: "arrow.down")
       
