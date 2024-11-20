@@ -24,7 +24,6 @@ struct BloodGlucose: JSON, Identifiable, Hashable {
 
     var sgv: Int?
     var direction: Direction?
-    var direction2: Direction2?
     let date: Decimal
     let dateString: Date
     let unfiltered: Decimal?
