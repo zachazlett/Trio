@@ -61,6 +61,7 @@ struct CurrentGlucoseView: View {
 
                     image
                     image2
+                    image3
                 }
                 HStack {
                     let minutesAgo = -1 * (recentGlucose?.dateString.timeIntervalSinceNow ?? 0) / 60
@@ -104,7 +105,6 @@ struct CurrentGlucoseView: View {
         switch direction {
         case .doubleUp,
              .singleUp,
-             .flat,
              .tripleUp:
             return Image(systemName: "arrow.up") 
         case .fortyFiveUp:
@@ -131,16 +131,41 @@ struct CurrentGlucoseView: View {
 
         switch direction {
         case .doubleUp,
-             .flat,
              .tripleUp:
             return Image(systemName: "arrow.up") 
         case .fortyFiveUp,
              .singleUp,
+             .flat,
              .fortyFiveDown,
              .singleDown:
             return Image(systemName: "") 
         case .doubleDown,
              .tripleDown:
+            return Image(systemName: "arrow.down")
+      
+        case .none,
+             .notComputable,
+             .rateOutOfRange:
+            return Image(systemName: "arrow.left.and.right")
+        }
+    }
+    var image3: Image {
+        guard let direction = recentGlucose?.direction else {
+            return Image(systemName: "arrow.left.and.right")
+        }
+
+        switch direction {
+        case .tripleUp:
+            return Image(systemName: "arrow.up") 
+        case .fortyFiveUp,
+             .singleUp,
+             .doubleUp,
+             .doubleDown,
+             .flat,
+             .fortyFiveDown,
+             .singleDown:
+            return Image(systemName: "") 
+        case .tripleDown:
             return Image(systemName: "arrow.down")
       
         case .none,
