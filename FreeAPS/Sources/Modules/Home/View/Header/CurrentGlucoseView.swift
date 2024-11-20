@@ -130,10 +130,10 @@ struct CurrentGlucoseView: View {
 
         switch direction {
         case .doubleUp,
-             .flat,
              .tripleUp:
             return Image(systemName: "arrow.up") 
         case .fortyFiveUp,
+             .flat,
              .singleUp,
              .fortyFiveDown,
              .singleDown:
